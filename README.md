@@ -8,3 +8,5 @@ Install Wemos D1 mini with board manager in Arduino IDE (Board manager URL: http
 Install ESP8266 Arduino libraries 
 
 Install Wemos SHT3x Arduino library: https://github.com/wemos/WEMOS_SHT3x_Arduino_Library
+
+Install the Wemos_D1_mini_pro_SHT30.ino file and upload to your board to try it.
