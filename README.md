@@ -9,4 +9,4 @@ It should work with any ESP8266 board as well.
 2. Install ESP8266 Arduino libraries from Arduino IDE library manager
 3. Install Wemos SHT3x Arduino library: https://github.com/wemos/WEMOS_SHT3x_Arduino_Library
 4. Install PubSub Arduino library from Arduino IDE library manager
-5. Download the Wemos_D1_mini_pro_SHT30.ino file from this repo, customize it and upload to your board to try it.
+5. Download the Wemos_D1_mini_pro_SHT30.ino file from this repo, customize it in Arduino IDE and upload to your board to try it.
