@@ -14,11 +14,6 @@ const char* mqtt_temp_topic = "...";
 const char* mqtt_hum_topic = "...";
 const int mqtt_port = 8883;
 
-// Variables
-long lastMsg = 0;
-char msg[50];
-int value = 0;
-
 // SHT30 object
 SHT3X sht30(0x45);
 
@@ -64,6 +59,7 @@ void setup_wifi() {
   Serial.println(WiFi.localIP());
 }
 
+// Connect to MQTT broker function
 void connect() {
   // Loop until we're connected
   while (!client.connected()) {
@@ -81,8 +77,8 @@ void connect() {
   }
 }
 
+// Loop
 void loop() {
-
   if (!client.connected()) {
      connect();
   }
@@ -99,5 +95,4 @@ void loop() {
   Serial.println(sht30.humidity);
   Serial.println();
   delay(3000);
-
 }
