@@ -13,6 +13,7 @@ const char* mqtt_pass = "...";
 const char* mqtt_temp_topic = "...";
 const char* mqtt_hum_topic = "...";
 const int mqtt_port = 8883;
+boolean retained = true;
 
 // SHT30 object
 SHT3X sht30(0x45);
@@ -30,10 +31,10 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 // Setup function
 void setup() {
-  pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
+  //pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
   Serial.begin(115200);
   setup_wifi();
-  client.setServer(mqtt_server, 1883);
+  client.setServer(mqtt_server, mqtt_port);
   client.setCallback(callback);
 }
 
@@ -88,11 +89,11 @@ void loop() {
   sht30.get();
   Serial.print("Temperature in Celsius : ");
   char buffer[10];
-  client.publish("temperature", dtostrf(sht30.cTemp, 5, 1, buffer));
+  client.publish(mqtt_temp_topic, dtostrf(sht30.cTemp, 5, 1, buffer), retained);
   Serial.println(sht30.cTemp);
   Serial.print("Relative Humidity : ");
-  client.publish("humidity", dtostrf(sht30.cTemp, 5, 2, buffer));
+  client.publish(mqtt_hum_topic, dtostrf(sht30.humidity, 5, 2, buffer), retained);
   Serial.println(sht30.humidity);
   Serial.println();
-  delay(3000);
+  delay(30000);
 }
