@@ -9,7 +9,8 @@ This code should work with any ESP8266 board and any MQTT broker.
 ### Hardware
 * Wemos D1 mini (pro or any ESP8266 board)
 * Wemos SHT30 shield
-* Micro USB to computer cable and computer
+* Micro USB to computer cable
+* Computer
 
 ### Software
 * Arduino IDE
