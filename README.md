@@ -1,7 +1,7 @@
 # Wemos_D1_mini_pro_SHT30
-Arduino based code with Wemos D1 mini Pro and SHT30 shield.
+Wemos D1 mini Pro & SHT30 shield using Arduino and MQTT.
 
-My goal is to have the SHT30 connected to the internet through wifi and publish data on a MQTT broker (I am using Mosquitto). 
+The goal is to have the SHT30 connected to the internet through wifi and publish temperature/humidity values on a MQTT broker. 
 This code should work with any ESP8266 board and any MQTT broker.
 
 ## Requirements
@@ -12,7 +12,8 @@ This code should work with any ESP8266 board and any MQTT broker.
 * Micro USB to computer cable and computer
 
 ### Software
-Arduino IDE 
+* Arduino IDE
+* MQTT Broker (Your own one like Mosquitto: https://mosquitto.org/download/ or any hosted MQTT broker provider)
 
 ## How to install
 
