@@ -1,4 +1,4 @@
-# Wemos_D1_mini_pro_SHT30
+# Wemos D1 mini pro SHT30
 Wemos D1 mini Pro & SHT30 shield using Arduino and MQTT.
 
 The goal is to have the SHT30 connected to the internet through wifi and publish temperature/humidity values on a MQTT broker. 
